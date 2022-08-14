@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 memory = MemoryStorage()
 bot = Bot(token= '2135375539:AAFh_iqlCXVCWQ5z_FpsL8av1uObE2ytOoU')
 disp = Dispatcher(bot, storage=memory)
-db = Database("projects/anonym_bot/db")
+db = Database("db")
 
 class FSM(StatesGroup):
     gender = State()
