@@ -13,8 +13,8 @@ from database import Database
 
 
 TOKEN = '2135375539:AAFh_iqlCXVCWQ5z_FpsL8av1uObE2ytOoU'
-WEBHOOK_HOST = 'https://telegram-anonymous-bot.herokuapp.com/'
-WEBHOOK_PATH = f'webhook/{TOKEN}'
+WEBHOOK_HOST = 'https://telegram-anonymous-bot.herokuapp.com'
+WEBHOOK_PATH = f'/webhook/{TOKEN}'
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 
