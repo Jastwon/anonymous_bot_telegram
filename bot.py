@@ -29,7 +29,7 @@ memory = MemoryStorage()
 bot = Bot(token=TOKEN)
 disp = Dispatcher(bot, storage=memory)
 disp.middleware.setup(LoggingMiddleware())
-db = Database("projects/anonym_bot/db")
+db = Database("db")
 
 class FSM(StatesGroup):
     gender = State()
