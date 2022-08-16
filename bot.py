@@ -1,4 +1,5 @@
 import logging
+import os
 
 from aiogram.utils.executor import start_webhook
 from aiogram import Bot, types
@@ -19,7 +20,7 @@ WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 
 WEBAPP_HOST = "0.0.0.0"
-WEBAPP_PORT = 5000
+WEBAPP_PORT = int(os.environ.get('PORT', 8000))
 
 
 
