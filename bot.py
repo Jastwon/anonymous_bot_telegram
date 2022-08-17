@@ -2,6 +2,7 @@ import logging
 import os
 
 from aiogram.utils.executor import start_webhook
+from aiogram.dispatcher.webhook import SendMessage
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.dispatcher import FSMContext
@@ -46,7 +47,7 @@ async def start(message: types.Message):
 
     
     await FSM.gender.set()
-    await bot.send_message(message.from_user.id, "Привет! Я анонимный телеграмм бот, для начала укажи свой пол", reply_markup=keyboard1)
+    return SendMessage(message.from_user.id, "Привет! Я анонимный телеграмм бот, для начала укажи свой пол", reply_markup=keyboard1)
 
 
 @disp.message_handler(state=FSM.gender)
