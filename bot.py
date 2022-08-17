@@ -47,7 +47,7 @@ async def start(message: types.Message):
 
     
     await FSM.gender.set()
-    return SendMessage(message.from_user.id, "Привет! Я анонимный телеграмм бот, для начала укажи свой пол", reply_markup=keyboard1)
+    await bot.send_message(message.from_user.id, "Привет! Я анонимный телеграмм бот, для начала укажи свой пол", reply_markup=keyboard1)
 
 
 @disp.message_handler(state=FSM.gender)
@@ -89,7 +89,7 @@ async def bot_message(message: types.Message):
 
             if db.create_chat(message.from_user.id, chat_2) == False:
                 db.add_waiting(message.from_user.id)
-                await bot.send_message(message.from_user.id, "🌀Идёт поиск", reply_markup=keyboard1)
+                return SendMessage(message.from_user.id, "🌀Идёт поиск", reply_markup=keyboard1)
 
             else:
                 keyboard1 = types.ReplyKeyboardMarkup(resize_keyboard=True)
