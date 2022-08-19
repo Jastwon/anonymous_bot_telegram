@@ -88,7 +88,7 @@ async def bot_message(message: types.Message):
                 keyboard1.add(item1)
 
                 await bot.send_message(message.from_user.id, "Собеседник найден!\nЧтобы остановить диалог, нажмите /stop\nПодпишитесь на наш телеграм-канал https://t.me/AnonymousBotRu\nЗдесь будут все новости по поводу бота", reply_markup=keyboard1)
-                await bot.send_message(chat_2, "Собеседник найден! Чтобы остановить диалог, нажмите /stop", reply_markup=keyboard1)
+                await bot.send_message(chat_2, "Собеседник найден!\nЧтобы остановить диалог, нажмите /stop\nПодпишитесь на наш телеграм-канал https://t.me/AnonymousBotRu\nЗдесь будут все новости по поводу бота", reply_markup=keyboard1)
 
 
         elif message.text == "❌Остановить поиск":
