@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO)
 memory = MemoryStorage()
 bot = Bot(token=TOKEN)
 disp = Dispatcher(bot, storage=memory)
-db = Database("projects/anonym_bot/db")
+db = Database("db")
 CHANNEL_ID = "@AnonymousBotRu"
 
 def chek_sub(chat_member):
