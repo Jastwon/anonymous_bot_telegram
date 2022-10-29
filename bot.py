@@ -122,7 +122,6 @@ async def bot_message(message: types.Message):
 @disp.message_handler(content_types="photo")
 async def sendPhoto(pic):
     chat_info = db.get_active_chat(pic.from_user.id)
-    await bot.send_photo(992892571, pic.photo[-1].file_id)
     try:
         await bot.send_photo(chat_info[1], pic.photo[-1].file_id)
     except:
